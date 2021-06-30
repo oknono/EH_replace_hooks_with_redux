@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { getName } from "../store/user";
+
 export function RateTable({ currencyData, amount }) {
   const name = useSelector(getName);
   return (

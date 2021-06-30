@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { RateTable } from "./RateTable";
 import { CurrencyCodePicker } from "./CurrencyCodePicker";
 import { AmountField } from "./AmountField";
-import { getAmount, getCurrencyData, getCurrencyCode, supportedCurrencies } from "../store/rates";
+import { getAmount, getCurrencyData, getCurrencyCode } from "../store/rates";
 
 
 export function ExchangeRate() {
@@ -15,7 +15,6 @@ export function ExchangeRate() {
         <h1 className="ExchangeRate-header">
           Exchange Rates{" "}
           <CurrencyCodePicker
-            supportedCurrencies={supportedCurrencies}
             currencyCode={currencyCode}
           />
         </h1>

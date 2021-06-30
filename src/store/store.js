@@ -1,4 +1,5 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import { ratesReducer } from "./rates";
 import { userReducer } from "./user";
 
@@ -7,4 +8,4 @@ const reducer = combineReducers({
     rates: ratesReducer
 })
 
-export const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+export const store = createStore(reducer, applyMiddleware(thunk));

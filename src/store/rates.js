@@ -51,3 +51,10 @@ export function changeCurrencyCode(code) {
         });
     }
 };
+
+// thunks
+export function getIntialRates(dispatch, getState) {
+    const state = getState();
+    const currencyCode = getCurrencyCode(state);
+    dispatch(changeCurrencyCode(currencyCode));
+}
